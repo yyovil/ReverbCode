@@ -1,6 +1,6 @@
-# agent-orchestrator
+# reverbcode
 
-Rewrite of the agent-orchestrator: a long-running Go backend daemon (`backend/`)
+Rewrite of reverbcode: a long-running Go backend daemon (`backend/`)
 paired with a placeholder Electron + TypeScript frontend shell (`frontend/`).
 
 See [`docs/`](docs/README.md) for architecture and status — start with the
@@ -8,7 +8,7 @@ Lifecycle Manager + Session Service lane in [`docs/architecture.md`](docs/archit
 
 ## Backend daemon
 
-The Go backend now has a Cobra-based `ao` CLI in [`backend/cmd/ao`](backend/cmd/ao).
+The Go backend now has a Cobra-based `rvrb` CLI in [`backend/cmd/rvrb`](backend/cmd/rvrb).
 The CLI controls the HTTP daemon — a loopback-only sidecar the Electron
 supervisor will also use. The daemon skeleton includes the chi router,
 middleware stack (recoverer → request-id → logger → real-ip), `/healthz` +
@@ -19,13 +19,13 @@ SIGINT/SIGTERM, SQLite storage, CDC polling, and lifecycle/reaper wiring.
 
 ```bash
 cd backend
-go run ./cmd/ao start             # start the daemon and wait for readiness
-go run ./cmd/ao status            # inspect PID/port/health/readiness
-go run ./cmd/ao stop              # gracefully stop the daemon
-go run ./cmd/ao daemon            # internal daemon entrypoint
+go run ./cmd/rvrb start             # start the daemon and wait for readiness
+go run ./cmd/rvrb status            # inspect PID/port/health/readiness
+go run ./cmd/rvrb stop              # gracefully stop the daemon
+go run ./cmd/rvrb daemon            # internal daemon entrypoint
 
-go run .                          # compatibility wrapper; starts the daemon
-AO_PORT=3019 go run ./cmd/ao start # override per invocation
+go run .                            # compatibility wrapper; starts the daemon
+AO_PORT=3019 go run ./cmd/rvrb start # override per invocation
 ```
 
 Health check:
@@ -46,8 +46,8 @@ is intentionally not env-configurable.
 | `AO_PORT` | `3001` | bind port; fails fast if taken |
 | `AO_REQUEST_TIMEOUT` | `60s` | per-request timeout (Go duration) |
 | `AO_SHUTDOWN_TIMEOUT` | `10s` | graceful-shutdown hard cap |
-| `AO_RUN_FILE` | `<UserConfigDir>/agent-orchestrator/running.json` | PID + port handshake path |
-| `AO_DATA_DIR` | `<UserConfigDir>/agent-orchestrator/data` | SQLite DB, WAL files, and managed state |
+| `AO_RUN_FILE` | `<UserConfigDir>/reverbcode/running.json` | PID + port handshake path |
+| `AO_DATA_DIR` | `<UserConfigDir>/reverbcode/data` | SQLite DB, WAL files, and managed state |
 
 ### Test
 
