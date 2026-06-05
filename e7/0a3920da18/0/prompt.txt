@@ -1,0 +1,1 @@
+alright I see that you hv written the evalrig related code in the @backend/internal/adapters/agent/ . you shouldn't hv done that because that dir is specially only for the agent adapters
