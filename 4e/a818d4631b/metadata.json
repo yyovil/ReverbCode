@@ -3,8 +3,13 @@
   "checkpoint_id": "4ea818d4631b",
   "strategy": "manual-commit",
   "branch": "wip/adapters-blob",
-  "checkpoints_count": 4,
+  "checkpoints_count": 12,
   "files_touched": [
+    "backend/internal/adapters/agent/activitydispatch/dispatch.go",
+    "backend/internal/adapters/agent/registry/registry.go",
+    "backend/internal/cli/evalrig/live.go",
+    "backend/internal/cli/evalrig/model.go",
+    "backend/internal/cli/hooks.go",
     "backend/internal/daemon/lifecycle_wiring.go"
   ],
   "sessions": [
@@ -13,13 +18,19 @@
       "transcript": "/4e/a818d4631b/0/full.jsonl",
       "content_hash": "/4e/a818d4631b/0/content_hash.txt",
       "prompt": "/4e/a818d4631b/0/prompt.txt"
+    },
+    {
+      "metadata": "/4e/a818d4631b/1/metadata.json",
+      "transcript": "/4e/a818d4631b/1/full.jsonl",
+      "content_hash": "/4e/a818d4631b/1/content_hash.txt",
+      "prompt": "/4e/a818d4631b/1/prompt.txt"
     }
   ],
   "token_usage": {
-    "input_tokens": 37304,
-    "cache_creation_tokens": 332743,
-    "cache_read_tokens": 3312644,
-    "output_tokens": 74490,
-    "api_call_count": 39
+    "input_tokens": 80756,
+    "cache_creation_tokens": 3887605,
+    "cache_read_tokens": 62481267,
+    "output_tokens": 420494,
+    "api_call_count": 234
   }
 }

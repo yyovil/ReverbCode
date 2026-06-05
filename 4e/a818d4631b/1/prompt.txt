@@ -1,0 +1,45 @@
+I want to invent a way to test the implementation of the agent adapters my agents have implemented here and build a eval matrix for them.
+
+The manual testing will be done based on 
+1. Whether or not the agents are spawned correctly or not?
+2. Whether or not their activity is mentioned accurately or not?
+3. Whether their SessionInfo is derived correctly as expected or not?
+4. Permissions are correctly imposed or not?
+5. Hooks are installed correctly in case the main worktree is also tracking them as well?
+6. Exactly right cmds are used or not?
+
+---
+
+alright so this is what I was envisioning.
+
+I want a video replay type of test so that I can visually prove to people in my org that I've tested the agent adapters properly. Zellij actions and go tests could help a lot here. Btw this testing rig has to be interactive and by interactive I mean that I should be able to control when to run the next test. So maybe some kind of TUI we can build and run it in a zellij pane and control the other zellij pane where the tests are demonstrated.
+
+All of this will either be recording or shown to somebody in live.
+
+---
+
+what's this: [Image #1] bro?
+
+---
+
+[Image #2] what am I doing wrong?
+
+---
+
+close it for me bro
+
+---
+
+and I don't think we need a .evalrigh.local.kdl for this. We just want 2 panes side by side.
+
+---
+
+[Image #3] why don't you test it out yourself first before claiming that its going to work this time>
+
+---
+
+also when I run the test rig, the tabs are gone. Why
+
+---
+
+/statusline
