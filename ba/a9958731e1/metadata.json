@@ -1,0 +1,23 @@
+{
+  "cli_version": "0.7.5",
+  "checkpoint_id": "baa9958731e1",
+  "strategy": "manual-commit",
+  "branch": "wip/adapters-blob",
+  "checkpoints_count": 1,
+  "files_touched": null,
+  "sessions": [
+    {
+      "metadata": "/ba/a9958731e1/0/metadata.json",
+      "transcript": "/ba/a9958731e1/0/full.jsonl",
+      "content_hash": "/ba/a9958731e1/0/content_hash.txt",
+      "prompt": "/ba/a9958731e1/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 43622,
+    "cache_creation_tokens": 382472,
+    "cache_read_tokens": 9955359,
+    "output_tokens": 109228,
+    "api_call_count": 76
+  }
+}

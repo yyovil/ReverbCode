@@ -1,0 +1,23 @@
+{
+  "cli_version": "0.7.5",
+  "checkpoint_id": "baa9958731e1",
+  "session_id": "89459108-2b25-44a5-98dc-fca7f0e0d407",
+  "strategy": "manual-commit",
+  "created_at": "2026-06-05T23:23:36.956538Z",
+  "branch": "wip/adapters-blob",
+  "checkpoints_count": 1,
+  "files_touched": [],
+  "agent": "Claude Code",
+  "model": "claude-opus-4-8[1m]",
+  "turn_id": "0a3527b97fbf",
+  "token_usage": {
+    "input_tokens": 43622,
+    "cache_creation_tokens": 382472,
+    "cache_read_tokens": 9955359,
+    "output_tokens": 109228,
+    "api_call_count": 76
+  },
+  "session_metrics": {
+    "turn_count": 4
+  }
+}
