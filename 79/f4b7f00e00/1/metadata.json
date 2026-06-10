@@ -1,0 +1,37 @@
+{
+  "cli_version": "0.7.5",
+  "checkpoint_id": "79f4b7f00e00",
+  "session_id": "80354c7c-dcab-4aea-a138-ce4132bae091",
+  "strategy": "manual-commit",
+  "created_at": "2026-06-10T02:29:32.69409Z",
+  "branch": "chore/prettier-ci",
+  "checkpoints_count": 1,
+  "files_touched": [
+    ".gitignore"
+  ],
+  "agent": "Claude Code",
+  "model": "claude-opus-4-8",
+  "turn_id": "e07b333e59f6",
+  "token_usage": {
+    "input_tokens": 87157,
+    "cache_creation_tokens": 9372332,
+    "cache_read_tokens": 193107376,
+    "output_tokens": 857586,
+    "api_call_count": 452
+  },
+  "session_metrics": {
+    "turn_count": 13
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-06-10T02:29:32.560855Z",
+    "agent_lines": 12,
+    "agent_removed": 1,
+    "human_added": 2,
+    "human_modified": 0,
+    "human_removed": 0,
+    "total_committed": 14,
+    "total_lines_changed": 36,
+    "agent_percentage": 36.11111111111111,
+    "metric_version": 2
+  }
+}

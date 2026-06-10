@@ -1,0 +1,7 @@
+alright I see that you hv written the evalrig related code in the @backend/internal/adapters/agent/ . you shouldn't hv done that because that dir is specially only for the agent adapters
+
+---
+
+I need you to create a worktree from the last commit so that we can fetch the code changes md in desktop-app-frontend branch and work on top of them.
+
+I'm starting my work towards accomplishing the 4th task of the week
