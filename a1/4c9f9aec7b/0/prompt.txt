@@ -1,0 +1,26 @@
+<task-notification>
+<task-id>aalright-if-we-857a56e89cd81914</task-id>
+<output-file>/private/tmp/claude-501/-Users-tanishqpalandurkar-Projects-reverbcode/4297db7e-75ca-4fe6-a099-b36e285906ed/tasks/aalright-if-we-857a56e89cd81914.output</output-file>
+<status>completed</status>
+<summary>Agent "alright if we start using portless.sh for this pr…" completed</summary>
+<result>Two separate questions, both good:
+
+**On portless** — yes, we should document it as the preferred dev preview method instead of the `launch.json`. Probably a note in `frontend/docs/` or `AGENTS.md` pointing to portless for the renderer dev server, same way you set it up for yyork.
+
+**On HTTP to the Go daemon** — yes, and that's already the architecture in the PR. The renderer talks to the daemon three ways:
+
+| Channel | Protocol | Used for |
+|---|---|---|
+| REST | HTTP → `http://127.0.0.1:&lt;port&gt;/api/v1/...` | CRUD — projects, sessions, tasks |
+| CDC events | SSE (HTTP long-poll) → `/api/v1/events` | Live updates — session/PR state changes |
+| Terminal PTY | WebSocket → `/mux` | Keystroke/output streaming |
+
+All three go from Chromium (the renderer process) directly to the Go daemon over loopback — which is why the CORS middleware in PR #167 was necessary. The alternative would be routing everything through the Electron main process via IPC, but that would make SSE and WebSocket significantly messier to proxy, so direct HTTP is the right call here.
+
+The one thing still unresolved from the architectural review: the renderer currently hardcodes port 3001. The daemon writes its actual bound port to `running.json`, and `daemon-discovery.ts` already parses that — it just isn't wired into `main.ts` yet to broadcast the port to the renderer at startup. That's the D3 gap we flagged earlier and the main thing to build next.</result>
+<usage><subagent_tokens>109376</subagent_tokens><tool_uses>0</tool_uses><duration_ms>22835</duration_ms></usage>
+</task-notification>
+
+---
+
+alright drop it then my man. Also we are gonna install the project local skill for that and track that skill too so that the whole team uses it. We are gonna learn lots of best agentic coding practises from my another project `~/Projects/yyork`
