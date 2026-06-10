@@ -1,0 +1,155 @@
+{
+  "cli_version": "0.7.5",
+  "checkpoint_id": "9fd9e7f48ec8",
+  "session_id": "89459108-2b25-44a5-98dc-fca7f0e0d407",
+  "strategy": "manual-commit",
+  "created_at": "2026-06-10T02:24:43.921219Z",
+  "branch": "feat/electron-renderer-clean",
+  "checkpoints_count": 5,
+  "files_touched": [
+    "backend/internal/httpd/apispec/openapi.yaml"
+  ],
+  "agent": "Claude Code",
+  "model": "claude-opus-4-8[1m]",
+  "turn_id": "7edc8a4d1d66",
+  "token_usage": {
+    "input_tokens": 59974,
+    "cache_creation_tokens": 3265143,
+    "cache_read_tokens": 47194609,
+    "output_tokens": 350039,
+    "api_call_count": 189
+  },
+  "skill_events_version": 1,
+  "skill_events": [
+    {
+      "id": "claude-skill-toolu_01FzKo89CxSzWWfUPmJKQBGt",
+      "event_type": "tool_invocation",
+      "skill": {
+        "name": "stack"
+      },
+      "source": {
+        "agent": "claude-code",
+        "signal": "skill_tool_use",
+        "confidence": "explicit"
+      },
+      "turn_id": "7edc8a4d1d66",
+      "transcript_anchor": {
+        "unit": "line",
+        "start": 566,
+        "end": 567,
+        "entry_ids": [
+          "428ec552-1f44-4911-a976-e405fc03774b"
+        ],
+        "tool_use_id": "toolu_01FzKo89CxSzWWfUPmJKQBGt"
+      },
+      "native": {
+        "tool_name": "Skill",
+        "tool_use_id": "toolu_01FzKo89CxSzWWfUPmJKQBGt"
+      },
+      "collapse": {
+        "target": "tool_pair",
+        "label": "Skill: stack",
+        "default_collapsed": true
+      }
+    },
+    {
+      "id": "claude-skill-toolu_01SuiizfXqPadfpumxT6rFbY",
+      "event_type": "tool_invocation",
+      "skill": {
+        "name": "gh-fix-ci"
+      },
+      "source": {
+        "agent": "claude-code",
+        "signal": "skill_tool_use",
+        "confidence": "explicit"
+      },
+      "turn_id": "7edc8a4d1d66",
+      "transcript_anchor": {
+        "unit": "line",
+        "start": 682,
+        "end": 683,
+        "entry_ids": [
+          "762bd96c-7556-4dfa-8325-9a3d339067c0"
+        ],
+        "tool_use_id": "toolu_01SuiizfXqPadfpumxT6rFbY"
+      },
+      "native": {
+        "tool_name": "Skill",
+        "tool_use_id": "toolu_01SuiizfXqPadfpumxT6rFbY"
+      },
+      "collapse": {
+        "target": "tool_pair",
+        "label": "Skill: gh-fix-ci",
+        "default_collapsed": true
+      }
+    }
+  ],
+  "session_metrics": {
+    "turn_count": 8
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-06-10T02:24:43.881553Z",
+    "agent_lines": 0,
+    "agent_removed": 0,
+    "human_added": 15220,
+    "human_modified": 39,
+    "human_removed": 0,
+    "total_committed": 15220,
+    "total_lines_changed": 15337,
+    "agent_percentage": 0,
+    "metric_version": 2
+  },
+  "prompt_attributions": [
+    {
+      "checkpoint_number": 2,
+      "user_lines_added": 0,
+      "user_lines_removed": 0,
+      "agent_lines_added": 0,
+      "agent_lines_removed": 0
+    },
+    {
+      "checkpoint_number": 3,
+      "user_lines_added": 236,
+      "user_lines_removed": 0,
+      "agent_lines_added": 23,
+      "agent_lines_removed": 1,
+      "user_added_per_file": {
+        ".mcp.json": 7,
+        "WEEK-GOALS.md": 229
+      }
+    },
+    {
+      "checkpoint_number": 4,
+      "user_lines_added": 236,
+      "user_lines_removed": 0,
+      "agent_lines_added": 23,
+      "agent_lines_removed": 1,
+      "user_added_per_file": {
+        ".mcp.json": 7,
+        "WEEK-GOALS.md": 229
+      }
+    },
+    {
+      "checkpoint_number": 5,
+      "user_lines_added": 236,
+      "user_lines_removed": 0,
+      "agent_lines_added": 23,
+      "agent_lines_removed": 1,
+      "user_added_per_file": {
+        ".mcp.json": 7,
+        "WEEK-GOALS.md": 229
+      }
+    },
+    {
+      "checkpoint_number": 6,
+      "user_lines_added": 236,
+      "user_lines_removed": 0,
+      "agent_lines_added": 23,
+      "agent_lines_removed": 1,
+      "user_added_per_file": {
+        ".mcp.json": 7,
+        "WEEK-GOALS.md": 229
+      }
+    }
+  ]
+}

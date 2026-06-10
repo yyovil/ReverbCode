@@ -3,7 +3,7 @@
   "checkpoint_id": "9fd9e7f48ec8",
   "strategy": "manual-commit",
   "branch": "feat/electron-renderer-clean",
-  "checkpoints_count": 11,
+  "checkpoints_count": 16,
   "files_touched": [
     "backend/internal/domain/session.go",
     "backend/internal/httpd/apispec/openapi.yaml",
@@ -27,13 +27,19 @@
       "transcript": "/9f/d9e7f48ec8/1/full.jsonl",
       "content_hash": "/9f/d9e7f48ec8/1/content_hash.txt",
       "prompt": "/9f/d9e7f48ec8/1/prompt.txt"
+    },
+    {
+      "metadata": "/9f/d9e7f48ec8/2/metadata.json",
+      "transcript": "/9f/d9e7f48ec8/2/full.jsonl",
+      "content_hash": "/9f/d9e7f48ec8/2/content_hash.txt",
+      "prompt": "/9f/d9e7f48ec8/2/prompt.txt"
     }
   ],
   "token_usage": {
-    "input_tokens": 29981,
-    "cache_creation_tokens": 5477515,
-    "cache_read_tokens": 132795609,
-    "output_tokens": 534651,
-    "api_call_count": 294
+    "input_tokens": 89955,
+    "cache_creation_tokens": 8742658,
+    "cache_read_tokens": 179990218,
+    "output_tokens": 884690,
+    "api_call_count": 483
   }
 }
