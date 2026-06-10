@@ -1,0 +1,84 @@
+So we hv ashish921998 suggesting some scaffolding related code changes in PR #156. Lets go through the suggested changes, reason about them and then we gon build on top of them code changes. most critical here is design desicions and architecture based suggestions by him.
+
+---
+
+alright. we should do couple of things before we start building on top of this then.
+
+---
+
+alright. we should do couple of things before we start building on top of this then. I want my remote origin's (forked repo) `main` to be synced up with remote upstream's main and then my local repo's main gets synced with the my remote origin's main every day at 12:00 AM, first thing in the morning. Tell me what dev tools do we have got at our disposal for this?
+
+---
+
+alright your recommendation is awesome. lets get that in place. use a subagent to complete this task in background. I need you to do couple of other things as well for me.
+
+---
+
+<task-notification>
+<task-id>a47bf9672d4f40a81</task-id>
+<tool-use-id>toolu_01GqM8WFRaVotR6RyPvcmm93</tool-use-id>
+<output-file>/private/tmp/claude-501/-Users-tanishqpalandurkar-Projects-reverbcode/4297db7e-75ca-4fe6-a099-b36e285906ed/tasks/a47bf9672d4f40a81.output</output-file>
+<status>completed</status>
+<summary>Agent "Set up nightly fork sync: GitHub Actions + launchd" completed</summary>
+<result>Everything looks correct. Here is a summary of what was created and the steps you need to take.
+
+---
+
+**Files created**
+
+| File | Purpose |
+|---|---|
+| `/Users/tanishqpalandurkar/Projects/reverbcode/.github/workflows/sync-fork.yml` | Hop 1 — GitHub Actions workflow, runs nightly at 00:00 UTC |
+| `/usr/local/bin/reverbcode-sync-main.sh` | Hop 2 — shell script that pulls origin/main fast-forward-only |
+| `~/Library/LaunchAgents/com.reverbcode.sync-main.plist` | Hop 2 — launchd job that fires the script at midnight local time |
+
+---
+
+**How the two hops work**
+
+- **Hop 1 (cloud):** GitHub Actions calls `gh repo sync yyovil/ReverbCode --branch main --force` once a day at 00:00 UTC. This force-syncs your fork's `origin/main` to match `upstream/main`. The `GITHUB_TOKEN` is automatically available in Actions runners — no extra secret needed.
+
+- **Hop 2 (local):** launchd wakes the shell script at midnight local time. The script runs `git pull --ff-only origin main` inside your repo. If your local `main` has unpushed commits ahead of `origin/main`, `--ff-only` makes git refuse with a non-zero exit and logs a clear error — it never rebases or destroys your work.
+
+---
+
+**Manual steps to activate the launchd job**
+
+The plist is written but not loaded. When you are ready to activate it, run one of these (either works on macOS 10.15+):
+
+```bash
+# Modern (recommended, macOS 10.11+)
+launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.reverbcode.sync-main.plist
+
+# Legacy alias (also works)
+launchctl load ~/Library/LaunchAgents/com.reverbcode.sync-main.plist
+```
+
+To verify it loaded:
+```bash
+launchctl list | grep com.reverbcode.sync-main
+```
+
+To check logs after it fires:
+```bash
+tail -f ~/Library/Logs/reverbcode-sync-main.log
+```
+
+To unload it later:
+```bash
+launchctl bootout gui/$(id -u) ~/Library/LaunchAgents/com.reverbcode.sync-main.plist
+```
+
+---
+
+**Reminder about the GitHub Actions workflow:** the file is written to disk but not committed or pushed. Review it, then `git add .github/workflows/sync-fork.yml &amp;&amp; git commit &amp;&amp; git push` when you are satisfied.</result>
+<usage><subagent_tokens>14146</subagent_tokens><tool_uses>9</tool_uses><duration_ms>52038</duration_ms></usage>
+</task-notification>
+
+---
+
+Alright lets just mk sure that this setup remains upto me with no kind of foot tracing left on the upstream. Also could you execute those cmds for me plz? I don't execute these cmds one by one by myself anymore. I let the agent do that for me.
+
+---
+
+I see that PR #156 is very noisy. It is titled: "feat(frontend): rebuild Electron desktop UI as a React + Vite renderer" and then it contain code changes like setting up .prettierrc for the repo. Also this PR contains code changes which are essentially formatting related iykwims? like files reformatted and suggested as code changes.

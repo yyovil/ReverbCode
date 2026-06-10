@@ -1,0 +1,23 @@
+{
+  "cli_version": "0.7.5",
+  "checkpoint_id": "e0c51b0acffb",
+  "strategy": "manual-commit",
+  "branch": "chore/prettier-ci",
+  "checkpoints_count": 2,
+  "files_touched": null,
+  "sessions": [
+    {
+      "metadata": "/e0/c51b0acffb/0/metadata.json",
+      "transcript": "/e0/c51b0acffb/0/full.jsonl",
+      "content_hash": "/e0/c51b0acffb/0/content_hash.txt",
+      "prompt": "/e0/c51b0acffb/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 15,
+    "cache_creation_tokens": 80456,
+    "cache_read_tokens": 714430,
+    "output_tokens": 9483,
+    "api_call_count": 11
+  }
+}
