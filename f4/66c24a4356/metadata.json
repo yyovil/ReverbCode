@@ -1,0 +1,23 @@
+{
+  "cli_version": "0.7.5",
+  "checkpoint_id": "f466c24a4356",
+  "strategy": "manual-commit",
+  "branch": "feat/electron-renderer-clean",
+  "checkpoints_count": 1,
+  "files_touched": null,
+  "sessions": [
+    {
+      "metadata": "/f4/66c24a4356/0/metadata.json",
+      "transcript": "/f4/66c24a4356/0/full.jsonl",
+      "content_hash": "/f4/66c24a4356/0/content_hash.txt",
+      "prompt": "/f4/66c24a4356/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 632,
+    "cache_creation_tokens": 664512,
+    "cache_read_tokens": 12236859,
+    "output_tokens": 78436,
+    "api_call_count": 135
+  }
+}
