@@ -177,3 +177,7 @@ What I'm saying is that no changes should be suggested for @.envrc, @.gitignore 
 ---
 
 alright then we have to update the @skills-lock.json file then. tell me how do we do that? you can install those skills in the PR #167 again at the project level and symlink them for rest of the agents. that'd work ig.
+
+---
+
+lets go with option A then
