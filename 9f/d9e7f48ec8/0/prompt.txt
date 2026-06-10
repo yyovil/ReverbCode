@@ -86,3 +86,7 @@ I see that PR #156 is very noisy. It is titled: "feat(frontend): rebuild Electro
 ---
 
 He'd tk time. Lets do it ourselves only and also the formatting for the remote repo shouldn't happen on user's local machine and suggested as code changes. here the actual meaningful code changes are just the .prettierrc config. Formatting should happen in the gh actions ig.
+
+---
+
+alright we should do it because he's probably be sleeping rn
