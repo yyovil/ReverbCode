@@ -3,7 +3,7 @@
   "checkpoint_id": "79f4b7f00e00",
   "strategy": "manual-commit",
   "branch": "chore/prettier-ci",
-  "checkpoints_count": 4,
+  "checkpoints_count": 5,
   "files_touched": [
     ".gitignore",
     ".prettierrc"
@@ -20,13 +20,19 @@
       "transcript": "/79/f4b7f00e00/1/full.jsonl",
       "content_hash": "/79/f4b7f00e00/1/content_hash.txt",
       "prompt": "/79/f4b7f00e00/1/prompt.txt"
+    },
+    {
+      "metadata": "/79/f4b7f00e00/2/metadata.json",
+      "transcript": "/79/f4b7f00e00/2/full.jsonl",
+      "content_hash": "/79/f4b7f00e00/2/content_hash.txt",
+      "prompt": "/79/f4b7f00e00/2/prompt.txt"
     }
   ],
   "token_usage": {
-    "input_tokens": 87679,
-    "cache_creation_tokens": 9597175,
-    "cache_read_tokens": 196613117,
-    "output_tokens": 892448,
-    "api_call_count": 502
+    "input_tokens": 147653,
+    "cache_creation_tokens": 12862318,
+    "cache_read_tokens": 243807726,
+    "output_tokens": 1242487,
+    "api_call_count": 691
   }
 }
