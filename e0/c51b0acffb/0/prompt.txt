@@ -82,3 +82,7 @@ Alright lets just mk sure that this setup remains upto me with no kind of foot t
 ---
 
 I see that PR #156 is very noisy. It is titled: "feat(frontend): rebuild Electron desktop UI as a React + Vite renderer" and then it contain code changes like setting up .prettierrc for the repo. Also this PR contains code changes which are essentially formatting related iykwims? like files reformatted and suggested as code changes.
+
+---
+
+He'd tk time. Lets do it ourselves only and also the formatting for the remote repo shouldn't happen on user's local machine and suggested as code changes. here the actual meaningful code changes are just the .prettierrc config. Formatting should happen in the gh actions ig.
