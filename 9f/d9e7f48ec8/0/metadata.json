@@ -1,0 +1,45 @@
+{
+  "cli_version": "0.7.5",
+  "checkpoint_id": "9fd9e7f48ec8",
+  "session_id": "4297db7e-75ca-4fe6-a099-b36e285906ed",
+  "strategy": "manual-commit",
+  "created_at": "2026-06-10T02:24:41.673925Z",
+  "branch": "feat/electron-renderer-clean",
+  "checkpoints_count": 2,
+  "files_touched": [],
+  "agent": "Claude Code",
+  "model": "claude-sonnet-4-6",
+  "turn_id": "19643c9381ba",
+  "token_usage": {
+    "input_tokens": 515,
+    "cache_creation_tokens": 218857,
+    "cache_read_tokens": 2998984,
+    "output_tokens": 31106,
+    "api_call_count": 45
+  },
+  "session_metrics": {
+    "turn_count": 7
+  },
+  "prompt_attributions": [
+    {
+      "checkpoint_number": 2,
+      "user_lines_added": 0,
+      "user_lines_removed": 0,
+      "agent_lines_added": 0,
+      "agent_lines_removed": 0
+    },
+    {
+      "checkpoint_number": 3,
+      "user_lines_added": 284,
+      "user_lines_removed": 0,
+      "agent_lines_added": 12,
+      "agent_lines_removed": 1,
+      "user_added_per_file": {
+        ".mcp.json": 7,
+        "WEEK-GOALS.md": 229,
+        "backend/internal/adapters/agent/hookutil/hookutil.go": 37,
+        "skills-lock.json": 11
+      }
+    }
+  ]
+}
