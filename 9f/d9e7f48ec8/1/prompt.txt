@@ -1,0 +1,49 @@
+yeah lets start with the renderer option.
+
+---
+
+I would also like to know how did vscode has implemented its in-app web browser. 
+
+My main concern is that would my users be able to annotate the UI elements/components of the rendered preview URL that the user is working upon because it needs access to the rendered DOM object for that.
+
+---
+
+alright jot it down
+
+---
+
+lets mv onto the next tech + design decision we have to tk to mv to impl part in order to accomplish this goal real quick
+
+---
+
+alright I'm going to go masturbate while I'm in shower and you my claude code agent, implement this and test this end to end. You can start the web app here: `~/Projects/yyork` and use that for the preview purpose and try to annotate and test if the agent in the terminal gets the annotated context properly or not.
+
+Ig you would also hv to implement the Terminal component part as well.
+
+For that you can tk the ref from `~/Projects/emdash`.
+
+---
+
+alright could you setup the demo for me real quick. I just want to be presented with the outputs. you should create a new zellij tab in the current session named demo and use panes to run the yyork app, the reverbcode app and spawn sessions
+
+---
+
+[Image #4] what the fuck is this bro?
+
+Create a separate terminal route
+
+---
+
+[Image #5] what is this man?
+
+---
+
+Terminal and Browser component should be rendered side by side and resized using the shadcn resizable component first of all
+
+---
+
+[Image #6] do you see this abnormal rendering bro
+
+---
+
+[Image #7] what the fuck homie?
