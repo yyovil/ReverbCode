@@ -48,3 +48,10 @@ session-events.jsonl.*
 Thumbs.db
 .direnv
 .go
+
+# Agent skill dirs — symlinks regenerated locally by `skills` (npx skills experimental_install).
+# Canonical, vendored skill content lives in .agents/skills/ (committed); skills-lock.json is the manifest.
+.claude/
+.codex/
+.opencode/
+.antigravitycli/
